@@ -128,7 +128,7 @@ export function calculateTimeUnitInterval(granularity) {
 
     if (granularity === 86400) {
         timeUnit = 'day';
-    } else if (granularity > 0) {
+    } else if (granularity > 59) {
         interval = granularity / 60;
         timeUnit = 'minute';
     }
@@ -237,3 +237,15 @@ export function patchPixelFromChart(stx) {
             * stx.layout.candleWidth + mp;
     };
 }
+
+export const ARROW_HEIGHT = 39;
+
+export const ARROW_COLORS = Object.freeze({
+    GREEN: '#4bb4b3',
+    ORANGE: '#ff6444',
+});
+
+export const DIRECTIONS = Object.freeze({
+    UP: 'UP',
+    DOWN: 'DOWN',
+});
